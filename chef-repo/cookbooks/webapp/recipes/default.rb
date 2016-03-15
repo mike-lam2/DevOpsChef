@@ -1,6 +1,6 @@
-gitsite = node.default['default']['Gitsite']
-application= node.default['default']['Application']
-branch_name = node.default['default']['BranchToClone']
+gitsite = node.default['ec2']['Gitsite']
+application= node.default['ec2']['Application']
+branch_name = node.default['ec2']['BranchToClone']
 repo=gitsite+application+'.git'
 
 bash 'git-clone' do

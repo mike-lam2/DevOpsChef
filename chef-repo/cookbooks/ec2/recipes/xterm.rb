@@ -1,4 +1,4 @@
-StackName = node.default['default']['StackName']
+StackName = node.default['ec2']['StackName']
 label='echo -ne "\033]0;${USER}@'+StackName+':${PWD/#$HOME/~}\007"'
 
 
