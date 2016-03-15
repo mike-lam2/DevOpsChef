@@ -134,14 +134,55 @@
                 ]
               }
             },
+                        "files":{
+              "/var/chef/chef-repo/infrastructure/attributes/default.rb":{
+                "content":{
+                  "Fn::Join":[
+                    "",
+                    [
+                      "default['default']['BuildVersion'] = '",
+                      {
+                        "Ref":"BuildVersion"
+                      },
+                      "'\n",
+                      "default['default']['StackId'] = '",
+                      {
+                        "Ref":"AWS::StackId"
+                      },
+                      "'\n",
+                      "default['default']['StackName'] = '",
+                      {
+                        "Ref":"AWS::StackName"
+                      },
+                      "'\n",
+                      "default['default']['Region'] = '",
+                      {
+                        "Ref":"AWS::Region"
+                      },
+                      "'\n",
+                      "\n"
+                    ]
+                  ]
+                },
+                "mode":"000400",
+                "owner":"root",
+                "group":"root"
+              }
+            },            
             "commands":{
               "10_git":{
                 "command":"git clone https://github.com/mike-lam2/DevOpsChef.git",
                 "cwd":"/home/ec2-user",
                 "ignoreErrors":"true"
               },
-              "20_ln_cookbook":{
-                "command":"#cp -r /home/ec2-user/DevOpsChef /var/chef/chef-repo/cookbooks/",
+              "20_chmod":{
+                "command":"chmod +x chefml.sh",
+                "cwd":"/home/ec2-user/DevOpsChef",
+                "ignoreErrors":"true"
+              }
+              "30_chefml":{
+                "command":"chefml.sh infrastructure::ec2_cli",
+                "cwd":"/home/ec2-user/DevOpsChef",
                 "ignoreErrors":"true"
               }
             }
