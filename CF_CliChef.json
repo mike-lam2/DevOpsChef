@@ -135,7 +135,7 @@
               }
             },
                         "files":{
-              "/var/chef/chef-repo/infrastructure/attributes/default.rb":{
+              "/var/chef/chef-repo/cookbooks/infrastructure/attributes/default.rb":{
                 "content":{
                   "Fn::Join":[
                     "",
@@ -176,7 +176,7 @@
                 "ignoreErrors":"true"
               },
               "20_chmod":{
-                "command":"chmod +x chefml.sh",
+                "command":"chmod +x *.sh",
                 "cwd":"/home/ec2-user/DevOpsChef",
                 "ignoreErrors":"true"
               },
