@@ -140,22 +140,22 @@
                   "Fn::Join":[
                     "",
                     [
-                      "default['default']['BuildVersion'] = '",
+                      "default['ec2']['BuildVersion'] = '",
                       {
                         "Ref":"BuildVersion"
                       },
                       "'\n",
-                      "default['default']['StackId'] = '",
+                      "default['ec2']['StackId'] = '",
                       {
                         "Ref":"AWS::StackId"
                       },
                       "'\n",
-                      "default['default']['StackName'] = '",
+                      "default['ec2']['StackName'] = '",
                       {
                         "Ref":"AWS::StackName"
                       },
                       "'\n",
-                      "default['default']['Region'] = '",
+                      "default['ec2']['Region'] = '",
                       {
                         "Ref":"AWS::Region"
                       },

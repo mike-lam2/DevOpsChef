@@ -181,37 +181,37 @@
                   "Fn::Join":[
                     "",
                     [
-                      "default['default']['BuildVersion'] = '",
+                      "default['ec2']['BuildVersion'] = '",
                       {
                         "Ref":"BuildVersion"
                       },
                       "'\n",
-                      "default['default']['StackId'] = '",
+                      "default['ec2']['StackId'] = '",
                       {
                         "Ref":"AWS::StackId"
                       },                       
                       "'\n",
-                      "default['default']['StackName'] = '",
+                      "default['ec2']['StackName'] = '",
                       {
                         "Ref":"AWS::StackName"
                       },                       
                       "'\n", 
-                      "default['default']['Region'] = '",
+                      "default['ec2']['Region'] = '",
                       {
                         "Ref":"AWS::Region"
                       },                        
                       "'\n", 
-                      "default['default']['Application'] = '",
+                      "default['ec2']['Application'] = '",
                       {
                         "Ref":"Application"
                       },                       
                       "'\n", 
-                      "default['default']['BranchToClone'] = '",
+                      "default['ec2']['BranchToClone'] = '",
                       {
                         "Ref":"BranchToClone"
                       },                       
                       "'\n", 
-                      "default['default']['Gitsite'] = 'https://github.com/mike-lam2/",
+                      "default['ec2']['Gitsite'] = 'https://github.com/mike-lam2/",
                       "'\n", 
                       "\n"
                     ]
