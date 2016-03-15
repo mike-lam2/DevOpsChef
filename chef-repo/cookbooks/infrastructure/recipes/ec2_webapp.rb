@@ -1,4 +1,4 @@
-include_recipe 'infrastructure::xterm'
+include_recipe 'infrastructure::ec2_cli'
 
 gitsite = node.default['default']['Gitsite']
 application= node.default['default']['Application']
