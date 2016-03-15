@@ -179,10 +179,9 @@
                 "command":"chmod +x chefml.sh",
                 "cwd":"/home/ec2-user/DevOpsChef",
                 "ignoreErrors":"true"
-              }
+              },
               "30_chefml":{
-                "command":"chefml.sh infrastructure::ec2_cli",
-                "cwd":"/home/ec2-user/DevOpsChef",
+                "command":"/home/ec2-user/DevOpsChef/chefml.sh infrastructure::ec2_cli",
                 "ignoreErrors":"true"
               }
             }
