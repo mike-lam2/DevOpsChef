@@ -1,3 +1,5 @@
+include_recipe 'ec2'
+
 gitsite = node.default['ec2']['Gitsite']
 application= node.default['ec2']['Application']
 branch_name = node.default['ec2']['BranchToClone']
