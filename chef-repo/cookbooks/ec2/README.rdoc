@@ -1,0 +1,8 @@
+customize and ec2 to have 
+- cfn so that ec2 can update itself when changes are done to either CF or Chef 
+- httpd so that we have a webserver,
+- some loggin in the httpd so that can see result without putty, 
+- xterm so that a proper label show in top window of putty
+- bash_profile to have a preferred configuration for ec2
+
+The CF ec2.json will execute this cookbook and provide default.rb attributes to this cookbook.  

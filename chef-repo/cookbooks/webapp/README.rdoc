@@ -1,0 +1,3 @@
+Adds the specified application to the webserver on an ec2 created with default recipe in ec2
+
+The CF webapp.json will execute this cookbook and provide default.rb attributes in the cookbook ec2.
