@@ -1,5 +1,0 @@
-include_recipe 'infrastructure::xterm'
-include_recipe 'infrastructure::bash_profile'
-include_recipe 'infrastructure::httpd'
-include_recipe 'infrastructure::varLog'
-include_recipe 'infrastructure::cfn'
