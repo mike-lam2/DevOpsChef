@@ -185,7 +185,7 @@
                       "'\n",
                       "default['ec2']['WebserverType'] = '",
                       {
-                        "Ref":"IncludeCfn"
+                        "Ref":"WebserverType"
                       },
                       "'\n",
                       "\n"
