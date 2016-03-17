@@ -21,6 +21,15 @@
         "Yes"
       ]
     },
+    "WebserverType":{
+      "Description":"which webserver to install",
+      "Type":"String",
+      "Default":"httpd",
+      "AllowedValues":[
+        "jetty",
+        "httpd"
+      ]
+    },
     "InstanceType":{
       "Description":"WebServer EC2 instance type",
       "Type":"String",
@@ -170,6 +179,11 @@
                       },
                       "'\n",
                       "default['ec2']['IncludeCfn'] = '",
+                      {
+                        "Ref":"IncludeCfn"
+                      },
+                      "'\n",
+                      "default['ec2']['WebserverType'] = '",
                       {
                         "Ref":"IncludeCfn"
                       },
