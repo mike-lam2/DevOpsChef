@@ -2,8 +2,8 @@
   "AWSTemplateFormatVersion":"2010-09-09",
   "Description":"CF_Cli.json extends on CF_EC2Base.json",
   "Parameters":{
-    "ChefRole":{
-      "Description":"chef roles to run",
+    "Ec2Build":{
+      "Description":"chef build recipe to run",
       "Type":"String",
       "Default":"webserver",
       "ConstraintDescription":"must be a role defined in chef."
@@ -191,8 +191,8 @@
                   "Fn::Join":[
                     "",
                     [
-                      "/home/ec2-user/DevOpsChef/chefrole.sh ",
-                      {"Ref":"ChefRole"},
+                      "/home/ec2-user/DevOpsChef/chefbuild.sh ",
+                      {"Ref":"Ec2Build"},
                       ".rb\n"
                     ]
                   ]
