@@ -2,9 +2,9 @@ include_recipe 'ec2'
 
 if "httpd".eql?(node.default['webserver']['WebserverType'])
   include_recipe 'webserver::httpd'
-elseif "jetty".eql?(node.default['webserver']['WebserverType'])
+elsif "jetty".eql?(node.default['webserver']['WebserverType'])
   include_recipe 'webserver::jetty'
-else
+elsif 
   log 'message' do
     message 'ERROR UNKNOWNED SERVER TO INSTALL:'+node.default['webserver']['WebserverType']
     level :error
