@@ -2,7 +2,7 @@
   "AWSTemplateFormatVersion":"2010-09-09",
   "Description":"CF_Cli.json extends on CF_EC2Base.json",
   "Parameters":{
-    "Ec2Build":{
+    "Recipe":{
       "Description":"chef build recipe to run",
       "Type":"String",
       "Default":"webserver",
@@ -192,7 +192,7 @@
                     "",
                     [
                       "/home/ec2-user/DevOpsChef/chefbuild.sh ",
-                      {"Ref":"Ec2Build"},
+                      {"Ref":"Recipe"},
                       ".rb\n"
                     ]
                   ]
