@@ -1,4 +1,4 @@
-incude_recipe 'ec2'
+include_recipe 'ec2'
 
 if "httpd".eql?(node.default['webserver']['WebserverType'])
   include_recipe 'webserver::httpd'
