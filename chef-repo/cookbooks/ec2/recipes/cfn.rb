@@ -26,7 +26,7 @@ template '/etc/cfn/hooks.d/cfn-auto-reloader.conf' do
   mode '0444'
 end
 
-link '/var/www/html/cfn' do
+link '/var/log/cfn' do
   to '/etc/cfn'
   link_type :symbolic
 end

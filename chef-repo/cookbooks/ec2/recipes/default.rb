@@ -1,5 +1,5 @@
 include_recipe 'ec2::xterm'
 include_recipe 'ec2::bash_profile'
-include_recipe 'ec2::httpd'
-include_recipe 'ec2::varLog'
-include_recipe 'ec2::cfn'
+if "Yes".eql?(node.default['ec2']['IncludeCfn'])
+  include_recipe 'ec2::cfn'
+end
