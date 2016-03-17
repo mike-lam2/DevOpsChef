@@ -1,4 +1,3 @@
-node.default['webserver']['WebserverType'] = "httpd"
-node.default['webserver']['WebserverBase'] = '/var/www/html'
-
-include_recipe 'webserver::webserver'
+include_recipe 'ec2'
+include_recipe 'webserver::httpd'
+include_recipe 'webserver::httpd_varLog'
