@@ -8,7 +8,6 @@
       "Default":"webserver",
       "ConstraintDescription":"must be a role defined in chef."
     },
-  "Parameters":{
     "KeyName":{
       "Description":"Name of an existing EC2 KeyPair to enable SSH access to the instance",
       "Type":"AWS::EC2::KeyPair::KeyName",
