@@ -5,6 +5,8 @@ wget http://download.eclipse.org/jetty/9.2.15.v20160210/dist/jetty-distribution-
 tar xvf jetty-distribution-9.2.15.v20160210.tar.gz
 cd jetty-distribution-9.2.15.v20160210
 cd demo-base
-java -jar ../start.jar
     EOH
 end
+
+
+#java -jar ../start.jar
