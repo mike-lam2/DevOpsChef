@@ -9,3 +9,12 @@ java -jar /home/ec2-user/jetty-distribution-9.2.15.v20160210/start.jar &
     EOH
 end
 
+#this will restart it when server gets restarted
+template '/etc/init.d/sysvScriptJetty ' do
+  source 'sysvScriptJetty.erb'
+  owner 'root'
+  group 'root'
+  mode '0444'
+end
+
+
