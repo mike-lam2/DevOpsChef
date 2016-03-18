@@ -174,31 +174,6 @@
                 "owner":"root",
                 "group":"root"
               }
-            },
-            "commands":{
-              "10_git":{
-                "command":"git clone https://github.com/mike-lam2/DevOpsChef.git",
-                "cwd":"/home/ec2-user",
-                "ignoreErrors":"true"
-              },
-              "20_chmod":{
-                "command":"chmod +x *.sh",
-                "cwd":"/home/ec2-user/DevOpsChef",
-                "ignoreErrors":"true"
-              },
-              "30_chefrole":{
-                "command":{
-                  "Fn::Join":[
-                    "",
-                    [
-                      "/home/ec2-user/DevOpsChef/chefbuild.sh ",
-                      {"Ref":"Recipe"},
-                      "\n"
-                    ]
-                  ]
-                },
-                "ignoreErrors":"true"
-              }
             }
           },
           "install_chefdk":{
