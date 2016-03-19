@@ -7,6 +7,8 @@ rm jetty-distribution-9.2.15.v20160210.tar.gz
 mv jetty-distribution-9.2.15.v20160210 jetty_home
 chown -R ec2-user:ec2-user jetty_home
 mv jetty_home/demo-base jetty_base
+cd jetty_base
+java -jar /home/ec2-user/jetty_home/start.jar &
     EOH
 end
 
