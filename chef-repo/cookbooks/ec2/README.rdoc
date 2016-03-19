@@ -5,4 +5,6 @@ customize and ec2 to have
 - xterm so that a proper label show in top window of putty
 - bash_profile to have a preferred configuration for ec2
 
-The CF ec2.json will execute this cookbook and provide default.rb attributes to this cookbook.  
+The CF ec2.json will execute this cookbook and provide default.rb attributes to this cookbook.
+
+=======================  
