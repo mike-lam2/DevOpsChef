@@ -1,3 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/jetty_base
-java -jar /home/ec2-user/jetty_home/start.jar &
+# Grabs and kill a process from the pidlist that has the word myapp
+
+pid=`ps aux | grep  /home/ec2-user/jetty_home/start.jar | awk '{print $2}'`
+kill -9 $pid

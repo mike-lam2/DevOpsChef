@@ -193,7 +193,7 @@
                     [
                       "/home/ec2-user/DevOpsChef/chefbuild.sh ",
                       {"Ref":"Recipe"},
-                      ".rb\n"
+                      "\n"
                     ]
                   ]
                 },
