@@ -26,6 +26,12 @@ template '/home/ec2-user/jetty_stop.sh' do
   mode '0700'
 end
 
+service 'jetty' do
+  start_command '/home/ec2-user/jetty_start.sh'
+  stop_command  '/home/ec2-user/jetty_stop.sh'
+  action [ :enable, :start ]
+end
+
 =begin
 THIS PIECE DOES NOT WORK
 cd jetty_base
